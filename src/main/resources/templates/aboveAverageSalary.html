@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Above Average Salary List</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Above Average Salary List</h2>
+    <p>Average Salary: 5564.96</p>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full name</th>
+            <th>Job</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Birthday</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.fullName}"></td>
+            <td th:text="${person.job}"></td>
+            <td th:text="${person.age}"></td>
+            <td th:text="${person.gender}"></td>
+            <td th:text="${person.city}"></td>
+            <td th:text="${person.salary}"></td>
+            <td th:text="${person.birthday}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
